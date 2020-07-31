@@ -11,8 +11,8 @@ const App = () => {
   const [viewport, setViewport] = useState({
     width: '100vw',
     height: '100vh',
-    latitude: 51.224960,
-    longitude: 6.775670,
+    latitude: 51.22496,
+    longitude: 6.77567,
     zoom: 3,
   });
 
@@ -30,7 +30,7 @@ const App = () => {
     setAddEntryLocation({
       latitude,
       longitude,
-    });
+    })
   };
 
   return (
@@ -43,7 +43,7 @@ const App = () => {
     >
       {logEntries.map((entry) => (
         <React.Fragment key={entry._id}>
-          <Marker latitude={entry.latitude}longitude={entry.longitude}>
+          <Marker latitude={entry.latitude} longitude={entry.longitude}>
             <div
               onClick={() =>
                 setShowPopup({
@@ -145,7 +145,7 @@ const App = () => {
                   getEntries();
                 }}
                 location={addEntryLocation}
-              /> 
+              />
             </div>
           </Popup>
         </>
