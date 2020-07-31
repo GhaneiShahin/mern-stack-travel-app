@@ -19,7 +19,7 @@ const LogEntryForm = ({ location, onClose }) => {
       console.error(error);
       setError(error.message);
       setLoading(false);
-    }
+    };
   };
 
   return (
